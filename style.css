@@ -1,8 +1,68 @@
+:root {
+    --baby-blue: #0ea5e9;
+    --light-grey: #E2E8F0;
+}
+
+@font-face {
+    font-family: "RobotoBlack";
+    src: url(fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: "RobotoBold";
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
 body, html {
     padding: 0;
     margin: 0;
 }
 
+body {
+    font-family: "RobotoRegular", Arial, sans-serif;
+}
+
 .container {
     display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.header {
+    grid-column: 2;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--baby-blue);
+    color: white;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.sidebar img {
+    filter: brightness(0) invert(1);
+}
+
+.content {
+    display: grid;
+    grid-column: 2;
+    background-color: var(--light-grey);
+}
+
+.card {
+    background-color: white;
 }
